@@ -1,0 +1,9 @@
+.quiz-container{display:grid; gap:.75rem}
+.quiz-card{background:#0f1530; border:1px solid var(--border); border-radius:12px; padding:1rem}
+.quiz-question{font-weight:600}
+.quiz-options{display:grid; gap:.5rem; margin:.5rem 0}
+.quiz-option{display:flex; align-items:center; gap:.5rem; padding:.5rem; border:1px solid var(--border); border-radius:8px; cursor:pointer}
+.quiz-actions{display:flex; gap:.5rem}
+.quiz-result{margin-top:.5rem; font-weight:600}
+.correct{color:var(--accent)}
+.wrong{color:var(--danger)}

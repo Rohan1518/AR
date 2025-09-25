@@ -1,0 +1,21 @@
+{
+  "name": "ar-edu-app",
+  "version": "1.0.0",
+  "description": "Augmented Reality Educational App with Chatbot and Quiz",
+  "type": "module",
+  "scripts": {
+    "dev": "npx http-server -c-1 -p 5173 .",
+    "build": "node scripts/build.js",
+    "optimize:images": "node scripts/optimize-images.js",
+    "deploy": "node scripts/deploy.js",
+    "test": "node tests/run-tests.js || echo 'Add real test runner'"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "esbuild": "0.21.5",
+    "fs-extra": "11.2.0",
+    "globby": "14.0.1",
+    "html-minifier-terser": "7.2.0"
+  }
+}
+

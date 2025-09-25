@@ -1,0 +1,5 @@
+@media (min-width: 900px){
+  .app-grid{grid-template-columns: 1.2fr .8fr}
+  #chat-section{grid-column:2}
+  #quiz-section{grid-column:2}
+}

@@ -1,0 +1,3 @@
+.ar-container{position:relative; height:55vh; background:#0a0f24; border:1px solid var(--border); border-radius:12px; overflow:hidden}
+.ar-toolbar{display:flex; gap:.5rem; margin-top:.75rem}
+a-scene{height:100%; width:100%}

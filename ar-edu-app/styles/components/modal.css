@@ -1,0 +1,4 @@
+.modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.6)}
+.modal.open{display:flex}
+.modal-card{background:#0f1530; border:1px solid var(--border); border-radius:12px; padding:1rem; width:min(520px,92vw)}
+.modal-actions{display:flex; justify-content:flex-end; gap:.5rem; margin-top:.75rem}

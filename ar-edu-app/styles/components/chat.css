@@ -1,0 +1,7 @@
+.chat-window{height:45vh; overflow:auto; border:1px solid var(--border); border-radius:10px; padding:1rem; background:#0f1530}
+.chat-form{display:flex; gap:.5rem; margin-top:.75rem}
+#chat-input{flex:1; border:1px solid var(--border); background:#0f1530; color:var(--fg); padding:.6rem .75rem; border-radius:8px}
+.msg{margin:.4rem 0; display:flex}
+.msg.user{justify-content:flex-end}
+.msg .bubble{max-width:75%; padding:.55rem .7rem; border-radius:12px; background:#1b2347; border:1px solid var(--border)}
+.msg.user .bubble{background:#1f2b5c; border-color:#2e3d76}
