@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR Edu App</title>
+    <link rel="icon" href="public/favicon.ico" />
+    <link rel="manifest" href="public/manifest.json" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/layouts/header.css" />
+    <link rel="stylesheet" href="styles/layouts/footer.css" />
+    <link rel="stylesheet" href="styles/layouts/grid.css" />
+    <link rel="stylesheet" href="styles/components/chat.css" />
+    <link rel="stylesheet" href="styles/components/quiz.css" />
+    <link rel="stylesheet" href="styles/components/ar.css" />
+    <link rel="stylesheet" href="styles/components/modal.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <!-- External libs (local fallbacks under lib/) -->
+    <script src="lib/threejs/three.min.js"></script>
+    <script src="lib/threejs/GLTFLoader.js"></script>
+    <script src="lib/aframe/aframe.min.js"></script>
+    <script src="lib/arjs/aframe-ar.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">AR Edu App</div>
+      <nav class="nav">
+        <button id="nav-ar" class="nav-btn" aria-pressed="true">AR</button>
+        <button id="nav-chat" class="nav-btn">Chat</button>
+        <button id="nav-quiz" class="nav-btn">Quiz</button>
+      </nav>
+    </header>
+
+    <main class="app-grid">
+      <section id="ar-section" class="panel visible" aria-label="AR Viewer">
+        <div id="ar-container" class="ar-container">
+          <!-- A-Frame Scene with AR.js -->
+          <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+            <a-assets id="a-assets"></a-assets>
+            <a-marker type="pattern" url="assets/markers/custom-marker.pdf">
+              <a-entity id="ar-model" position="0 0 0" rotation="0 0 0"></a-entity>
+            </a-marker>
+            <a-entity camera></a-entity>
+          </a-scene>
+        </div>
+        <div class="ar-toolbar">
+          <button id="btn-reset-model" class="btn">Reset</button>
+          <button id="btn-snapshot" class="btn">Snapshot</button>
+        </div>
+      </section>
+
+      <section id="chat-section" class="panel" aria-label="Chatbot">
+        <div class="chat-window" id="chat-window"></div>
+        <form id="chat-form" class="chat-form" autocomplete="off">
+          <input id="chat-input" type="text" placeholder="Ask about any topic..." aria-label="Chat input" required />
+          <button id="chat-send" type="submit" class="btn primary">Send</button>
+        </form>
+      </section>
+
+      <section id="quiz-section" class="panel" aria-label="Quiz" hidden>
+        <div id="quiz-container" class="quiz-container"></div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <span>© <span id="year"></span> AR Edu App</span>
+    </footer>
+
+    <!-- App Scripts -->
+    <script type="module" src="scripts/app.js"></script>
+  </body>
+</html>
+
